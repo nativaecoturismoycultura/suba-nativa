@@ -1,0 +1,124 @@
+/* ============================================
+   NATIVA · Subpáginas (rutas, marketplace, directorio)
+   Se carga DESPUÉS de styles.css. Sin estilos en línea (compatible con la CSP).
+   ============================================ */
+
+/* Enlace del logo dentro del header */
+a.nav-logo { color: inherit; }
+
+/* ===== Cabecera de subpágina ===== */
+.sub-hero {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 120px 0 var(--spacing-lg);
+}
+.sub-tag {
+    color: var(--color-on-brand);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+.sub-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    line-height: 1.1;
+    max-width: 22ch;
+    margin-bottom: var(--spacing-md);
+}
+.sub-lead {
+    font-size: 1.15rem;
+    max-width: 62ch;
+    color: var(--color-text-muted-light);
+}
+
+/* ===== Migas de pan ===== */
+.crumbs { margin-bottom: var(--spacing-md); font-size: 0.9rem; }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+.crumbs li + li::before { content: "/"; margin-right: var(--spacing-sm); color: var(--color-on-brand); }
+.crumbs a { color: var(--color-text-muted-light); text-decoration: underline; text-underline-offset: 3px; }
+.crumbs a:hover { color: var(--color-ink); }
+.crumbs li[aria-current="page"] { color: var(--color-on-brand); font-weight: 700; }
+
+/* ===== Listados ===== */
+.card-actions { display: flex; gap: var(--spacing-sm); flex-wrap: wrap; }
+.card-actions .btn { flex: 1 1 8rem; width: auto; }
+.price-main { font-size: 1.05rem; }
+.route-price { margin-bottom: var(--spacing-md); font-size: 0.9rem; color: var(--color-text-muted); }
+.sub-note { margin-top: var(--spacing-lg); background-color: #f0e5cf; padding: var(--spacing-md); border-radius: var(--radius-md); }
+.sub-note p { color: #493b29; }
+.sub-note-inline { margin-top: var(--spacing-md); color: var(--color-text-muted); font-size: 0.95rem; }
+
+.market-card .btn-market-alt,
+.directory-card .card-link { display: block; }
+.btn-market-alt {
+    background-color: transparent;
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+    margin-top: calc(var(--spacing-sm) * -1);
+}
+.directory-card .card-link { margin: 0 var(--spacing-md) var(--spacing-md); padding: 0.5rem 1rem; font-size: 0.9rem; }
+
+.see-all { margin-top: var(--spacing-lg); }
+.see-all .btn-light { background-color: transparent; color: var(--color-secondary); border-color: var(--color-secondary); }
+
+/* Planes del directorio */
+.plans-title { font-family: var(--font-heading); font-size: 1.6rem; margin: var(--spacing-xl) 0 var(--spacing-sm); }
+.plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg); }
+.plan-card { background: #fff; border: 1px solid #e8ece5; border-radius: var(--radius-lg); padding: var(--spacing-lg); display: flex; flex-direction: column; gap: var(--spacing-md); }
+.plan-featured { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
+.plan-name { font-family: var(--font-heading); font-size: 1.2rem; }
+.plan-price { font-size: 1.6rem; font-weight: 700; }
+.plan-price span { font-size: 0.85rem; font-weight: 400; color: var(--color-text-muted); }
+.plan-list { padding-left: 1.2rem; flex: 1; }
+
+/* ===== Detalle ===== */
+.detail { background-color: var(--color-secondary); padding: var(--spacing-lg) 0 var(--spacing-xl); }
+.detail-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: var(--spacing-xl); align-items: start; }
+.detail-main > * + * { margin-top: var(--spacing-md); }
+.detail-main h2 { font-family: var(--font-heading); font-size: 1.6rem; margin-top: var(--spacing-lg); color: var(--color-text-dark); }
+.detail-main p,
+.detail-main li { max-width: 70ch; }
+.detail-cover { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-lg); }
+
+.check-list,
+.plain-list { list-style: none; display: grid; gap: var(--spacing-sm); }
+.check-list li { position: relative; padding-left: 1.6rem; }
+.check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent-dark); font-weight: 700; }
+.plain-list li { padding-left: 1rem; position: relative; }
+.plain-list li::before { content: "•"; position: absolute; left: 0; color: var(--color-accent-dark); }
+.detail-main a, .aside-card .plain-list a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Paradas: es una secuencia real, por eso va numerada */
+.tramos { list-style: none; counter-reset: tramo; display: grid; gap: var(--spacing-md); }
+.tramos li { counter-increment: tramo; position: relative; background: #fff; border: 1px solid #e8ece5; border-radius: var(--radius-md); padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) 3.4rem; }
+.tramos li::before { content: counter(tramo); position: absolute; left: var(--spacing-md); top: var(--spacing-md); width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--color-ink); color: var(--color-secondary); display: grid; place-items: center; font-weight: 700; font-size: 0.9rem; }
+.tramos h3 { font-family: var(--font-heading); font-size: 1.05rem; }
+.tramo-meta { color: var(--color-accent-dark); font-weight: 700; font-size: 0.9rem; }
+
+/* Panel lateral */
+.detail-aside { position: sticky; top: 90px; }
+.aside-card { background: #fff; border: 1px solid #e8ece5; border-radius: var(--radius-lg); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); display: grid; gap: var(--spacing-md); }
+.aside-title { font-family: var(--font-heading); font-size: 1.2rem; }
+.aside-sub { font-family: var(--font-heading); font-size: 1rem; margin-top: var(--spacing-sm); }
+.price-note { font-size: 0.9rem; color: var(--color-text-muted); }
+.facts { display: grid; gap: var(--spacing-sm); }
+.facts dt { font-size: 0.8rem; font-weight: 700; color: var(--color-accent-dark); }
+.facts dd { font-size: 0.95rem; }
+.btn-block { display: block; width: 100%; }
+.back-link { text-align: center; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .detail-layout { grid-template-columns: 1fr; }
+    .detail-aside { position: static; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .sub-title { font-size: 2.2rem; }
+}
+@media (max-width: 576px) {
+    .sub-hero { padding-top: 100px; }
+    .sub-title { font-size: 1.8rem; }
+    .aside-card { padding: var(--spacing-md); }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

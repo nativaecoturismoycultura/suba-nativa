@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rutas guiadas en bicicleta por los humedales, la sabana y los cerros de Suba, Bogotá.">
+    <meta name="theme-color" content="#738678">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Experiencias · Nativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="subpaginas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="header" role="banner">
+        <nav class="nav-container" aria-label="Navegación principal">
+            <a class="nav-logo" href="index.html" aria-label="Nativa, ir al inicio">
+                <img src="assets/icons/logo-zari.svg" alt="" width="50" height="50">
+                <span class="nav-brand">NATIVA</span>
+                <span class="nav-subtitle">Bogotá</span>
+            </a>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span class="hamburger"></span></button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li><li><a href="rutas.html" class="active" aria-current="page">Experiencias</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="directorio.html">Directorio</a></li>
+                <li><a href="index.html#reservas" class="nav-cta">Reserva tu ruta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+
+        <section class="sub-hero">
+            <div class="container">
+                <nav class="crumbs" aria-label="Ruta de navegación"><ol><li><a href="index.html">Inicio</a></li><li aria-current="page">Experiencias</li></ol></nav>
+                <h1 class="sub-title">Experiencias Nativa</h1>
+                <p class="sub-lead">Tres rutas guiadas en bicicleta. Elige una para ver sus paradas, lo que incluye y qué llevar.</p>
+            </div>
+        </section>
+        <section class="routes">
+            <div class="container">
+                <div class="routes-grid">
+                    <article class="route-card" data-route="rios">
+                        <div class="route-image">
+                            <img src="assets/images/ruta-rios.jpg" alt="Garza junto a vegetación exuberante en Briceño, Colombia" loading="lazy" width="400" height="300">
+                            <span class="route-tag">💧 Agua y biodiversidad</span>
+                        </div>
+                        <div class="route-content">
+                            <h2 class="route-title">Entre Ríos</h2>
+                            <p class="route-description">Una travesía entre canales, aves y relatos de restauración alrededor de los humedales de Suba.</p>
+                            <div class="route-meta"><span>📍 12 km</span><span>⏱️ 4 horas</span></div>
+                            <div class="route-price"><p class="price-main"><strong>$75.000</strong> COP por persona</p><p>Tarifa grupal (15 o más personas): $70.000 COP por persona</p></div>
+                            <div class="card-actions">
+                                <a href="ruta-rios.html" class="btn btn-outline">Ver detalles</a>
+                                <a href="index.html?ruta=rios#reservas" class="btn btn-route">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="route-card" data-route="sabana">
+                        <div class="route-image">
+                            <img src="assets/images/ruta-sabana.jpg" alt="Ritual cultural con fuego y música en Bogotá, Colombia" loading="lazy" width="400" height="300">
+                            <span class="route-tag">🔥 Memoria ancestral</span>
+                        </div>
+                        <div class="route-content">
+                            <h2 class="route-title">Ruta Ancestral: de la Chupkua a la montaña</h2>
+                            <p class="route-description">Una experiencia de interpretación cultural junto a memorias muiscas, caminos rurales y saberes de la sabana.</p>
+                            <div class="route-meta"><span>📍 18 km</span><span>⏱️ 5 horas</span></div>
+                            <div class="route-price"><p class="price-main"><strong>$95.000</strong> COP por persona</p><p>Tarifa grupal (15 o más personas): $90.000 COP por persona</p></div>
+                            <div class="card-actions">
+                                <a href="ruta-sabana.html" class="btn btn-outline">Ver detalles</a>
+                                <a href="index.html?ruta=sabana#reservas" class="btn btn-route">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="route-card" data-route="cerro">
+                        <div class="route-image">
+                            <img src="assets/images/ruta-cerro.jpg" alt="Vista del cerro con vegetación nativa en Suba, Bogotá" loading="lazy" width="400" height="300">
+                            <span class="route-tag">⛰️ Bosque y mirador</span>
+                        </div>
+                        <div class="route-content">
+                            <h2 class="route-title">Ruta Cerro</h2>
+                            <p class="route-description">Un recorrido suave en bicicleta hacia el cerro para mirar la sabana desde lo alto, caminar entre bosque nativo y conversar sobre cómo se cuida este territorio.</p>
+                            <div class="route-meta"><span>📍 5 km aprox.</span><span>⏱️ 4 horas</span></div>
+                            <div class="route-price"><p class="price-main"><strong>$75.000</strong> COP por persona</p><p>Tarifa grupal (15 o más personas): $70.000 COP por persona</p></div>
+                            <div class="card-actions">
+                                <a href="ruta-cerro.html" class="btn btn-outline">Ver detalles</a>
+                                <a href="index.html?ruta=cerro#reservas" class="btn btn-route">Reservar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="sub-note"><p>Cada salida es de hasta 20 personas y se confirma al completar 7. Si no se completa, te proponemos otra fecha.</p></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Nativa · turismo que deja raíces.</h2>
+                    <p>Una invitación a recorrer Bogota desde el respeto, la curiosidad y la corresponsabilidad con sus comunidades y ecosistemas.</p>
+                    <p class="footer-social">
+                        <a class="footer-link" href="mailto:nativaecoturismoycultura@gmail.com">Correo</a> ·
+                        <a class="footer-link" href="https://www.facebook.com/Nativaecoturismoycultura" target="_blank" rel="noopener noreferrer">Facebook</a> ·
+                        <a class="footer-link" href="https://www.instagram.com/nativaecoturismoycultura" target="_blank" rel="noopener noreferrer">Instagram</a> ·
+                        <a class="footer-link" href="https://www.tiktok.com/@nativaecoturismoycultura" target="_blank" rel="noopener noreferrer">TikTok</a> ·
+                        <a class="footer-link" href="https://www.youtube.com/@nativa.ecoturismoycultura" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    </p>
+                    <p><a href="politica-datos.html" class="footer-link">Política de tratamiento de datos</a></p>
+                    <p class="footer-copy">© 2026 Nativa Ecoturismo Comunitario · Bogotá, Colombia.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
